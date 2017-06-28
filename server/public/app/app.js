@@ -69,6 +69,12 @@ angular.module('app', [
                     return Stations.get({id: $stateParams.bssid}).$promise;
                 }]
             }
+        })
+        .state('history', {
+            url: '/history',
+            templateUrl: 'app/history/history.html',
+            controller: 'HistoryController',
+            controllerAs: 'vm'
         });
 
         $urlRouterProvider.otherwise('/');
